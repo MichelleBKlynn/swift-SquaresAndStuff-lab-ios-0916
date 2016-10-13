@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +19,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceShip" translatesAutoresizingMaskIntoConstraints="NO" id="ibE-M6-9AH"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinstein" translatesAutoresizingMaskIntoConstraints="NO" id="549-9Q-RfX">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="549-9Q-RfX" secondAttribute="height" multiplier="1:1" id="VBq-oR-YZ4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albert Einstein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfE-zk-cJM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nd-br-gPd">
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="549-9Q-RfX" firstAttribute="top" secondItem="ibE-M6-9AH" secondAttribute="bottom" multiplier="0.75" id="20o-qh-3f3"/>
+                            <constraint firstItem="ibE-M6-9AH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7RG-P9-fun"/>
+                            <constraint firstItem="1Nd-br-gPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9g-qf-ZOI"/>
+                            <constraint firstItem="549-9Q-RfX" firstAttribute="height" secondItem="ibE-M6-9AH" secondAttribute="height" multiplier="0.8" id="K5x-YO-UtL"/>
+                            <constraint firstItem="1Nd-br-gPd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N50-aV-d6D"/>
+                            <constraint firstItem="AfE-zk-cJM" firstAttribute="trailing" secondItem="549-9Q-RfX" secondAttribute="trailing" id="Ozh-H2-ngq"/>
+                            <constraint firstItem="ibE-M6-9AH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="SCo-Ls-sP6"/>
+                            <constraint firstItem="AfE-zk-cJM" firstAttribute="leading" secondItem="549-9Q-RfX" secondAttribute="leading" id="dEm-eN-92u"/>
+                            <constraint firstItem="ibE-M6-9AH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dlb-Tq-IcW"/>
+                            <constraint firstItem="ibE-M6-9AH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="mMD-9A-iDA"/>
+                            <constraint firstItem="549-9Q-RfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pXW-B4-abg"/>
+                            <constraint firstItem="AfE-zk-cJM" firstAttribute="bottom" secondItem="549-9Q-RfX" secondAttribute="bottom" id="rAJ-1z-UTi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -25,4 +58,8 @@
             <point key="canvasLocation" x="399.19999999999999" y="388.15592203898052"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinstein" width="300" height="320"/>
+        <image name="SpaceShip" width="900" height="563"/>
+    </resources>
 </document>
